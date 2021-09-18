@@ -1,19 +1,19 @@
 version: 2.1
 executors:
-  my-custom-executor:
+  feza-executor:
     docker:
       - image: cimg/base:stable
       
 jobs:
   publish-feza:
 
-    executor: my-custom-executor
+    executor: feza-executor
     steps:
       - checkout
       - run: |
           # echo Hello, World!
 
 workflows:
-  my-custom-workflow:
+  feza-workflow:
     jobs:
       - publish-feza
